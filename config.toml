@@ -1,2 +1,19 @@
 theme = "creative-portfolio"
 
+[menu]
+
+  [[menu.main]]
+    name = "Art"
+    url = "/art/"
+    weight = 1
+
+  [[menu.main]]
+    name = "Music"
+    url = "/music/"
+    weight = 2
+
+  [[menu.main]]
+    name = "Photography"
+    url = "/photography/"
+    weight = 3
+
