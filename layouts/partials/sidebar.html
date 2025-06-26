@@ -1,0 +1,38 @@
+<div id="sidebar" class="col-xs-6 col-sm-4 col-md-3 sidebar-offcanvas">
+  <div class="sidebar-content">
+
+    <div class="site-logo" style="text-align:center; margin:1em 0 0.7em 0;">
+  <a href="/" title="Home">
+    <img src="/images/logo.png" alt="rolovsky logo" width="120" />
+  </a>
+</div>
+
+    <div class="site-teaser" style="text-align:center; margin:0 0 1em 0;">
+      <span style="font-size:1em; color:#222;">
+        Urban surfaces. Color meets concrete.
+      </span>
+    </div>
+
+    <h1 class="sidebar-heading"><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h1>
+    {{ range .Site.Params.sidebarAbout }}
+      <p class="sidebar-p">{{ . | safeHTML }}</p>
+    {{ end }}
+    <ul class="sidebar-menu">
+      {{ range .Site.Params.navlinks }}
+        <li><a href="{{ absURL .url }}">{{ .name }}</a></li>
+      {{ end }}
+    </ul>
+    {{ partial "social_buttons_in_sidebar.html" . }}
+
+   <div class="copyright">
+  <p class="credit" style="font-size:0.95em;">
+    <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="noopener">
+      <img src="https://licensebuttons.net/l/by-nc-nd/4.0/88x31.png" alt="CC BY-NC-ND 4.0" style="vertical-align:middle; height:18px; margin-right:3px;"/>
+      CC BY-NC-ND 4.0
+    </a><br>
+    No commercial use, no remix, no copying.<br>
+    All content © rolovsky.
+  </p>
+</div>
+  </div>
+</div>
